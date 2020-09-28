@@ -1,0 +1,18 @@
+version : "3"
+
+
+servicios : 
+
+            app :
+                    container_name:  appJPB
+                    restart: always
+                    build: .
+                    ports : 
+                            - "3030:3000"
+                    links:  mongo        
+            mongo : 
+                    container_name: mongodb
+                    image : mongo 
+                    volumes: 
+                    ports : 
+                        - "27018:27017"     
