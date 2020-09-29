@@ -3,43 +3,43 @@ import mongoose, { Schema, Document } from 'mongoose'
 
 export interface IMatricula extends Document {
         codMatricula: String,
-        aTipoDocumento:string,
-        anumDocumento:Number,
-        aNombres : string,
+        aTipoDocumento: string,
+        anumDocumento: Number,
+        aNombres: string,
         aApePaterno: String,
-        aApeMaterno :String,
-        aSexo:String,
-        aFechaNac:Date,
-        aDepartamentoNac:String,
-        aProvinciaNac:String,
-        aDistritoNac:String,
-        aDepartamentoDom:String,
-        aProvinciaDom:String,
-        aDistritoDom:String,
-        aDireccionDom:String,
-        aReligion:String,
-        aNumHermanos:Number,
-        aLugarOcupHermanos:number,
-        aTrabaja:Boolean,
-        aOcupacion:String,
-        aDiscapacidad:String,
-        fTipoDocumento:String,
-        fnumDocumento:number,    
-        fNombres:String, 
-        fApePaterno:String,
-        fApeMaterno:String,
-        fFechaNac:Date,
-        fDepartamentoNac:String,
-        fProvinciaNac:String,
-        fDistritoNac:String,
-        fDepartamentoDom:String,
-        fProvinciaDom:String,
-        fDistritoDom:String,
-        fEstadoCivil:String,
-        fEstadoFallecido:Boolean,
-        fNivelInsitucion:String,
-        fSituacionLaboral:boolean,
-        fTelefono:number,
+        aApeMaterno: String,
+        aSexo: String,
+        aFechaNac: Date,
+        aDepartamentoNac: String,
+        aProvinciaNac: String,
+        aDistritoNac: String,
+        aDepartamentoDom: String,
+        aProvinciaDom: String,
+        aDistritoDom: String,
+        aDireccionDom: String,
+        aReligion: String,
+        aNumHermanos: Number,
+        aLugarOcupHermanos: number,
+        aTrabaja: Boolean,
+        aOcupacion: String,
+        aDiscapacidad: String,
+        fTipoDocumento: String,
+        fnumDocumento: number,
+        fNombres: String,
+        fApePaterno: String,
+        fApeMaterno: String,
+        fFechaNac: Date,
+        fDepartamentoNac: String,
+        fProvinciaNac: String,
+        fDistritoNac: String,
+        fDepartamentoDom: String,
+        fProvinciaDom: String,
+        fDistritoDom: String,
+        fEstadoCivil: String,
+        fEstadoFallecido: Boolean,
+        fNivelInsitucion: String,
+        fSituacionLaboral: boolean,
+        fTelefono: number,
         active: Boolean
 }
 
@@ -49,160 +49,186 @@ const schema: Schema = new Schema({
                 type: String,
                 required: true
         },
-        aTipoDocumento:{
-                type:String,
+        aTipoDocumento: {
+                type: String,
                 required: true
         },
-        anumDocumento:{
-                type:Number,
+        anumDocumento: {
+                type: Number,
                 required: true
         },
-        aNombres:{
-                type:String,
+        aNombres: {
+                type: String,
                 required: true
         },
-        aApePaterno:{
-                type:String,
-                required: true
-        },  
-        aApeMaterno:{
-                type:String,
+        aApePaterno: {
+                type: String,
                 required: true
         },
-        aSexo:{
-                type:String,
+        aApeMaterno: {
+                type: String,
                 required: true
         },
-        aFechaNac:{
-                type:Date,
+        aSexo: {
+                type: String,
                 required: true
         },
-        aDepartamentoNac:{
-                type:String,
+        aFechaNac: {
+                type: Date,
                 required: true
         },
-        aProvinciaNac:{
-                type:String,
+        aDepartamentoNac: {
+                type: String,
                 required: true
         },
-        aDistritoNac:{
-                type:String,
+        aProvinciaNac: {
+                type: String,
                 required: true
         },
-        aDepartamentoDom:{
-                type:String,
+        aDistritoNac: {
+                type: String,
                 required: true
         },
-        aProvinciaDom:{
-                type:String,
+        aDepartamentoDom: {
+                type: String,
                 required: true
         },
-        aDistritoDom:{
-                type:String,
+        aProvinciaDom: {
+                type: String,
                 required: true
         },
-        aDireccionDom:{
-                type:String,
-                required:true
-        },
-        aReligion:{
-                type:String,
+        aDistritoDom: {
+                type: String,
                 required: true
         },
-        aNumHermanos:{
-                type:Number,
+        aDireccionDom: {
+                type: String,
                 required: true
         },
-
-        aLugarOcupHermanos:{
-                type:Number,
+        aReligion: {
+                type: String,
+                required: true
+        },
+        aNumHermanos: {
+                type: Number,
                 required: true
         },
 
-        aTrabaja:{
-                type:Boolean,
+        aLugarOcupHermanos: {
+                type: Number,
                 required: true
         },
-        aOcupacion:{
-                type:String,
-                required:true
-        },
-        aDiscapacidad:{
-                type:String,
+
+        aTrabaja: {
+                type: Boolean,
                 required: true
         },
-        //PadreFamilia
-        fTipoDocumento:{
-        type:String,
-        required: true
-        },
-        fnumDocumento:{
-                type:Number,
+        aOcupacion: {
+                type: String,
                 required: true
         },
-        fNombres:{
-                type:String,
+        aDiscapacidad: {
+                type: String,
                 required: true
         },
-        fApePaterno:{
-                type:String,
-                required: true
-        },  
-        fApeMaterno:{
-                type:String,
-                required: true
-        },
-        fFechaNac:{
-                type:Date,
+
+        //Padre
+
+        fTipoDocumentopadre: {
+                type: String,
                 required: true
         },
-        fDepartamentoNac:{
-                type:String,
+        fnumDocumentopadre: {
+                type: Number,
                 required: true
         },
-        fProvinciaNac:{
-                type:String,
+        fNombrespadre: {
+                type: String,
                 required: true
         },
-        fDistritoNac:{
-                type:String,
+        fApePaternopadre: {
+                type: String,
                 required: true
         },
-        fDepartamentoDom:{
-                type:String,
+        fApeMaternopadre: {
+                type: String,
                 required: true
         },
-        fProvinciaDom:{
-                type:String,
+        fFechaNacpadre: {
+                type: Date,
                 required: true
         },
-        fDistritoDom:{
-                type:String,
+        fEstadoCivilpadre: {
+                type: String,
                 required: true
         },
-        fEstadoCivil:{
-                type:String,
-                required:true
-        },
-        fEstadoFallecido:{
-                type:Boolean,
+        fEstadoFallecidopadre: {
+                type: Boolean,
                 required: true
         },
-        fNivelInsitucion:{
-                type:String,
-                required:true
+        fNivelInsitucionpadre: {
+                type: String,
+                required: true
         },
-        fSituacionLaboral:{
-                type:Boolean,
-                required:true
+        fSituacionLaboralpadre: {
+                type: Boolean,
+                required: true
         },
-        fTelefono:{
-                type:Number,
-                required:true
+        fTelefonopadre: {
+                type: Number,
+                required: true
         },
+
+        //Madre
+
+        fTipoDocumentomadre: {
+                type: String,
+                required: true
+        },
+        fnumDocumentomadre: {
+                type: Number,
+                required: true
+        },
+        fNombresmadre: {
+                type: String,
+                required: true
+        },
+        fApePaternomadre: {
+                type: String,
+                required: true
+        },
+        fApeMaternomadre: {
+                type: String,
+                required: true
+        },
+        fFechaNacmadre: {
+                type: Date,
+                required: true
+        },
+        fEstadoCivilmadre: {
+                type: String,
+                required: true
+        },
+        fEstadoFallecidomadre: {
+                type: Boolean,
+                required: true
+        },
+        fNivelInsitucionmadre: {
+                type: String,
+                required: true
+        },
+        fSituacionLaboralmadre: {
+                type: Boolean,
+                required: true
+        },
+        fTelefonomadre: {
+                type: Number,
+                required: true
+        },
+
         active: {
-            type: Boolean,
-            defaultsTo: true
+                type: Boolean,
+                defaultsTo: true
         }
 
 })
