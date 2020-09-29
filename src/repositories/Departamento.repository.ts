@@ -1,28 +1,20 @@
-import {IDepartamento, Departamentos} from '../models'
+import { IDepartamento, Departamentos } from '../models';
 
+export default class DepartamentoReposiroty {
+  async insertDepartamento(departamento: IDepartamento) {
+    const departamentoCreated = await Departamentos.create(departamento);
 
-export default class DepartamentoReposiroty{
+    return departamentoCreated;
+  }
 
-    async insertDepartamento(departamento: IDepartamento) { 
-        const departamentoCreated =  await  Departamentos.create(departamento)
+  async getDepartamentos() {
+    const getdepartamentos = await Departamentos.find();
 
-        return departamentoCreated
-    }
+    return getdepartamentos;
+  }
 
-
-    async getDepartamentos(){
-
-        const getdepartamentos = await Departamentos.find()
-
-        return getdepartamentos
-    }
-
-    async getDepartamentosById(id:String){
-
-
-        const getdepartamentobyid = await Departamentos.find({id})
-        return getdepartamentobyid
-
-    }
-
+  async getDepartamentosById(id: string) {
+    const getdepartamentobyid = await Departamentos.find({ id });
+    return getdepartamentobyid;
+  }
 }

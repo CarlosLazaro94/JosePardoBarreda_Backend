@@ -1,23 +1,25 @@
-import http from 'http'
-import app from '../app'
+import http from 'http';
+import { Application } from 'express';
+import yenv from 'yenv';
+import Message from '../utils/message';
 
-const initializeServer = async () => {
+const env = yenv();
 
-    const startServer = new Promise((resolve, reject)=>{
-        const server: http.Server = http.createServer(app)
-        server.listen(3000)
-            .on("listening",() =>{
-                console.log('server is running on port 3000')
-                resolve()
-            })
-            .on("error", err =>{
-                console.log("an error ocurred in server")
-                reject(err)
-            })
-    })
+const initializeServer = async (app: Application) => {
+  const startServer = new Promise((resolve, reject) => {
+    const server: http.Server = http.createServer(app);
+    server
+      .listen(env.PORT)
+      .on('listening', () => {
+        Message.log(`server is running on port ${env.PORT}`);
+        resolve();
+      })
+      .on('error', (err) => {
+        Message.log('an error ocurred in server');
+        reject(err);
+      });
+  });
 
-    await startServer
-
-}
-
-export default initializeServer
+  await startServer;
+};
+export default initializeServer;

@@ -1,27 +1,25 @@
-import mongoose ,{ Schema, Document }from 'mongoose'
+import mongoose, { Schema, Document } from 'mongoose';
 
-export interface IProvincia extends Document{
-
-    id: String,
-    name: String,
-    department_id: String
+export interface IProvincia extends Document {
+  id: String;
+  name: String;
+  department_id: String;
 }
 
-const schema :Schema = new Schema({
+const schema: Schema = new Schema({
+  id: {
+    type: String,
+    required:true
+  },
 
-    id:{
-        type:String
-    },
+  name: {
+    type: String,
+    required:true
+  },
+  department_id: {
+    type: String,
+    required:true
+  },
+});
 
-    name:{
-        type:String
-    },
-    department_id:{
-        type:String
-    }    
-
-
-
-})
-
-export default mongoose.model<IProvincia>("Provincias",schema)
+export default mongoose.model<IProvincia>('Provincias', schema);

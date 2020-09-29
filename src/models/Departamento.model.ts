@@ -1,23 +1,18 @@
-import mongoose ,{ Schema, Document }from 'mongoose'
+import mongoose, { Schema, Document } from 'mongoose';
 
-export interface IDepartamento extends Document{
-
-    id:String,
-    name:String
-
+export interface IDepartamento extends Document {
+  id: string;
+  name: string;
 }
 
-const schema :Schema = new Schema({
+const schema: Schema = new Schema({
+  id: {
+    type: String,
+  },
 
-    id:{
-        type:String
-    },
+  name: {
+    type: String,
+  },
+});
 
-    name:{
-        type:String
-    }    
-
-
-})
-
-export default mongoose.model<IDepartamento>("Departamentos",schema)
+export default mongoose.model<IDepartamento>('Departamentos', schema);

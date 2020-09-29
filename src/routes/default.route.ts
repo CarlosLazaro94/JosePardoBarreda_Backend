@@ -1,8 +1,7 @@
-import express, {Request, Response, NextFunction} from "express"
+import express, { Request, Response, NextFunction } from 'express';
 
 const router = express.Router();
 
-router.get('/',(req:Request, res: Response)=> res.send('Index'))
-
+router.get('/', (req: Request, res: Response) => res.send('Index'));
 
 export default router;

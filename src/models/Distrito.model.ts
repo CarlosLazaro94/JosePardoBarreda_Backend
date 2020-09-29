@@ -1,31 +1,25 @@
-import mongoose,{ Schema, Document, mongo } from 'mongoose'
+import mongoose, { Schema, Document, mongo } from 'mongoose';
 
-export interface IDistrito extends Document{
-
-    id: String,
-    name: String,
-    province_id: String,
-    department_id: String
-
+export interface IDistrito extends Document {
+  id: string;
+  name: string;
+  province_id: string;
+  department_id: string;
 }
 
-const schema : Schema = new Schema({
+const schema: Schema = new Schema({
+  id: {
+    type: String,
+  },
+  name: {
+    type: String,
+  },
+  province_id: {
+    type: String,
+  },
+  department_id: {
+    type: String,
+  },
+});
 
-    id:{
-        type:String
-    },
-    name:{
-        type:String
-    },
-    province_id:{
-        type:String
-    },
-    department_id:{
-        type:String
-    }
-
-})
-
-
-
-export default mongoose.model<IDistrito>("Distritos",schema)
+export default mongoose.model<IDistrito>('Distritos', schema);

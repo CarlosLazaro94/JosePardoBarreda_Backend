@@ -1,32 +1,27 @@
-import {IUsuario, Usuario} from "../models"
+import { IUsuario, Usuario } from '../models';
 
-export default class UsuarioRepository{
+export default class UsuarioRepository {
+  async insertUsuario(usuario: IUsuario) {
+    const usuarioCreated = await Usuario.create(usuario);
 
-    async insertUsuario(usuario: IUsuario){
+    return usuarioCreated;
+  }
 
-        const usuarioCreated = await Usuario.create(usuario)
+  async getUsuarioAll() {
+    const getusuarioall = await Usuario.find();
 
-        return usuarioCreated
+    return getusuarioall;
+  }
 
-    }
+  async getUsuarioById(_id: String):Promise<IUsuario> {
+    const getusuariobyid:IUsuario = await Usuario.findOne(_id);
 
-    async getUsuarioAll(){
-        const getusuarioall = await Usuario.find()
+    return getusuariobyid;
+  }
 
-        return getusuarioall
-    }
+  async updateUsuario(_id: String, usuario: IUsuario) {
+    const updateusuario = await Usuario.updateOne(_id, usuario);
 
-    async getUsuarioById(_id:String){
-        const getusuariobyid = await Usuario.findOne(_id)
-
-        return getusuariobyid
-    }
-
-    async updateUsuario(_id:String, usuario:IUsuario){
-        const updateusuario = await Usuario.updateOne(_id, usuario)
-
-        return updateusuario
-    }
-
-
+    return updateusuario;
+  }
 }
