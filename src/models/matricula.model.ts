@@ -36,7 +36,7 @@ export interface IMatricula extends Document {
   fNivelInsitucionpadre: String,
   fSituacionLaboralpadre: Boolean,
   fTelefonopadre: Number,
-
+  fViveconestudiantepadre:String,
   //Madre
 
   fTipoDocumentomadre: String,
@@ -50,6 +50,7 @@ export interface IMatricula extends Document {
   fNivelInsitucionmadre: String,
   fSituacionLaboralmadre: Boolean,
   fTelefonomadre: Number,
+  fViveconestudiantemadre:String,
   active: boolean;
 }
 
@@ -193,6 +194,10 @@ const schema: Schema = new Schema({
     type: Number,
     required: true,
   },
+  fViveconestudiantepadre:{
+    type: String,
+    required: true,
+  },
 
   //Madre
 
@@ -240,6 +245,10 @@ const schema: Schema = new Schema({
   },
   fTelefonomadre: {
     type: Number,
+    required: true,
+  },
+  fViveconestudiantemadre:{
+    type: String,
     required: true,
   },
 
