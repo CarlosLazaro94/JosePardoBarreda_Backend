@@ -1,44 +1,55 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IMatricula extends Document {
-  codMatricula: string;
-  aTipoDocumento: string;
+  codMatricula: String;
+  aTipoDocumento: String;
   anumDocumento: number;
-  aNombres: string;
-  aApePaterno: string;
-  aApeMaterno: string;
-  aSexo: string;
+  aNombres: String;
+  aApePaterno: String;
+  aApeMaterno: String;
+  aSexo: String;
   aFechaNac: Date;
-  aDepartamentoNac: string;
-  aProvinciaNac: string;
-  aDistritoNac: string;
-  aDepartamentoDom: string;
-  aProvinciaDom: string;
-  aDistritoDom: string;
-  aDireccionDom: string;
-  aReligion: string;
-  aNumHermanos: number;
-  aLugarOcupHermanos: number;
+  aDepartamentoNac: String;
+  aProvinciaNac: String;
+  aDistritoNac: String;
+  aDepartamentoDom: String;
+  aProvinciaDom: String;
+  aDistritoDom: String;
+  aDireccionDom: String;
+  aReligion: String;
+  aNumHermanos: Number;
+  aLugarOcupHermanos: Number;
   aTrabaja: boolean;
-  aOcupacion: string;
-  aDiscapacidad: string;
-  fTipoDocumento: string;
-  fnumDocumento: number;
-  fNombres: string;
-  fApePaterno: string;
-  fApeMaterno: string;
-  fFechaNac: Date;
-  fDepartamentoNac: string;
-  fProvinciaNac: string;
-  fDistritoNac: string;
-  fDepartamentoDom: string;
-  fProvinciaDom: string;
-  fDistritoDom: string;
-  fEstadoCivil: string;
-  fEstadoFallecido: boolean;
-  fNivelInsitucion: string;
-  fSituacionLaboral: boolean;
-  fTelefono: number;
+  aOcupacion: String;
+  aDiscapacidad: String;
+
+  //Padre
+
+  fTipoDocumentopadre: String,
+  fnumDocumentopadre: Number,
+  fNombrespadre: String,
+  fApePaternopadre: String,
+  fApeMaternopadre: String,
+  fFechaNacpadre: Date,
+  fEstadoCivilpadre: String,
+  fEstadoFallecidopadre: Boolean,
+  fNivelInsitucionpadre: String,
+  fSituacionLaboralpadre: Boolean,
+  fTelefonopadre: Number,
+
+  //Madre
+
+  fTipoDocumentomadre: String,
+  fnumDocumentomadre: Number,
+  fNombresmadre: String,
+  fApePaternomadre: String,
+  fApeMaternomadre: String,
+  fFechaNacmadre: Date,
+  fEstadoCivilmadre: String,
+  fEstadoFallecidomadre: Boolean,
+  fNivelInsitucionmadre: String,
+  fSituacionLaboralmadre: Boolean,
+  fTelefonomadre: Number,
   active: boolean;
 }
 
