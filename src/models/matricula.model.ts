@@ -21,7 +21,7 @@ export interface IMatricula extends Document {
   aLugarOcupHermanos: Number;
   aTrabaja: boolean;
   aOcupacion: String;
-  aDiscapacidad: String;
+  aDiscapacidad: Boolean;
 
   //Padre
 
@@ -142,7 +142,7 @@ const schema: Schema = new Schema({
     required: true,
   },
   aDiscapacidad: {
-    type: String,
+    type: Boolean,
     required: true,
   },
 
