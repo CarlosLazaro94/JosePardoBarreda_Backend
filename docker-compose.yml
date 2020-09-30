@@ -5,11 +5,16 @@ services:
        restart: always
        build: .
        ports: 
-           - "3030:3000"
+           - "3000:3000"
+       volumes:
+           - .:/home/node/app
+           
        links: 
            - mongo        
    mongo: 
        container_name: mongodb
        image : mongo 
        ports: 
-           - "27018:27017"     
+           - "27018:27017" 
+       logging: 
+            driver: none    

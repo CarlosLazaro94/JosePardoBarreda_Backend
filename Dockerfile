@@ -1,15 +1,15 @@
-FROM node:12.18.3
+FROM node:14
 
-RUN mkdir -p /usr/src/app
-
-WORKDIR /usr/src/app
+RUN mkdir -p /home/node/app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm cache clean --force
+
+RUN npm cache verify
+
+RUN npm install 
 
 COPY . . 
 
-EXPOSE 3000
-
-CMD ["npm", "start"]
+CMD ["npm", "run", "start:dev"]

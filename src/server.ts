@@ -5,6 +5,7 @@ import Message from './utils/message';
 
 const start = async () => {
   try {
+    
     await initializeServer(app);
     await initializeDatabase();
   } catch (error) {

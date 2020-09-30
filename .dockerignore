@@ -1,2 +1,6 @@
+cache
+dist
 node_modules
-npm-debug.log
+reports
+test
+package-lock.json

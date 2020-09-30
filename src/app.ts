@@ -3,9 +3,8 @@ import router from '../src/routes/default.route';
 import { MatriculaRouter, UsuarioRouter, Ubigeoroutes } from './routes';
 import cors from 'cors'
 
-
-
 const app: express.Application = express();
+
 
 app.use(cors())
 
