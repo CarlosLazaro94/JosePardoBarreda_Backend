@@ -25,32 +25,34 @@ export interface IMatricula extends Document {
 
   //Padre
 
-  fTipoDocumentopadre: String,
-  fnumDocumentopadre: Number,
-  fNombrespadre: String,
-  fApePaternopadre: String,
-  fApeMaternopadre: String,
-  fFechaNacpadre: Date,
-  fEstadoCivilpadre: String,
-  fEstadoFallecidopadre: Boolean,
-  fNivelInsitucionpadre: String,
-  fSituacionLaboralpadre: Boolean,
-  fTelefonopadre: Number,
-  fViveconestudiantepadre:Boolean,
+  fTipoDocumentopadre: String;
+  fnumDocumentopadre: Number;
+  fNombrespadre: String;
+  fApePaternopadre: String;
+  fApeMaternopadre: String;
+  fFechaNacpadre: Date;
+  fEstadoCivilpadre: String;
+  fEstadoFallecidopadre: Boolean;
+  fNivelInsitucionpadre: String;
+  fSituacionLaboralpadre: Boolean;
+  fOcupacionpadre: String;
+  fTelefonopadre: Number;
+  fViveconestudiantepadre:Boolean;
   //Madre
 
-  fTipoDocumentomadre: String,
-  fnumDocumentomadre: Number,
-  fNombresmadre: String,
-  fApePaternomadre: String,
-  fApeMaternomadre: String,
-  fFechaNacmadre: Date,
-  fEstadoCivilmadre: String,
-  fEstadoFallecidomadre: Boolean,
-  fNivelInsitucionmadre: String,
-  fSituacionLaboralmadre: Boolean,
-  fTelefonomadre: Number,
-  fViveconestudiantemadre:Boolean,
+  fTipoDocumentomadre: String;
+  fnumDocumentomadre: Number;
+  fNombresmadre: String;
+  fApePaternomadre: String;
+  fApeMaternomadre: String;
+  fFechaNacmadre: Date;
+  fEstadoCivilmadre: String;
+  fEstadoFallecidomadre: Boolean;
+  fNivelInsitucionmadre: String;
+  fSituacionLaboralmadre: Boolean;
+  fOcupacionmadre: String;
+  fTelefonomadre: Number;
+  fViveconestudiantemadre:Boolean;
   active: boolean;
 }
 
@@ -190,6 +192,10 @@ const schema: Schema = new Schema({
     type: Boolean,
     required: true,
   },
+  fOcupacionpadre: {
+    type: String,
+    required: true,
+  },
   fTelefonopadre: {
     type: Number,
     required: true,
@@ -241,6 +247,10 @@ const schema: Schema = new Schema({
   },
   fSituacionLaboralmadre: {
     type: Boolean,
+    required: true,
+  },
+  fOcupacionmadre: {
+    type: String,
     required: true,
   },
   fTelefonomadre: {
