@@ -1,6 +1,5 @@
-import { IDepartamento, Departamentos } from '../models';
-
-export default class DepartamentoReposiroty {
+import Departamentos , {IDepartamento} from '../models/Departamento.model'
+export default class Departamentorepository {
   async insertDepartamento(departamento: IDepartamento) {
     const departamentoCreated = await Departamentos.create(departamento);
 

@@ -1,6 +1,6 @@
 import express, { Router } from 'express';
-import { UsuarioRepository } from '../repositories';
-import { UsuarioController } from '../controllers';
+import  UsuarioRepository  from '../repositories/Usuario.repository';
+import  UsuarioController  from '../controllers/Usuario.controller';
 
 const router = express.Router();
 const reporitory = new UsuarioRepository();

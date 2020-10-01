@@ -1,4 +1,4 @@
-import { DistritoRepository } from '../repositories';
+import  DistritoRepository  from '../repositories/Distrito.repository';
 import { Request, Response } from 'express';
 
 export default class DistritoController {

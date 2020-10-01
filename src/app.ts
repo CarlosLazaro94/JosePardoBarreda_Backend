@@ -1,7 +1,13 @@
+//import modulos
 import express, { Request, Response } from 'express';
 import router from '../src/routes/default.route';
-import { MatriculaRouter, UsuarioRouter, Ubigeoroutes } from './routes';
 import cors from 'cors'
+//import dependencias
+import Ubigeoroutes from './routes/Ubigeo.routes';
+import MatriculaRouter from './routes/Matricula.route';
+import UsuarioRouter from './routes/Usuario.router';
+
+
 
 const app: express.Application = express();
 

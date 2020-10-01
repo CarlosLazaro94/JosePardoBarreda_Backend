@@ -1,5 +1,5 @@
 //import { IProvincia, Provincias } from '../models';
-import Provincias, {IProvincia} from '../models/Provincia.model'
+import Provincias, {IProvincia} from '../models/Provincia.model' 
 export default class ProvinciaRepository {
   async insertProvincia(provincias: IProvincia) {
     const provinciasCreated = await Provincias.create(provincias);

@@ -1,14 +1,11 @@
 import express, { Router } from 'express';
-import {
-  DepartamentoRepository,
-  ProvinciaRepository,
-  DistritoRepository,
-} from '../repositories';
-import {
-  DepartamentoController,
-  ProvinciaController,
-  DistritoController,
-} from '../controllers';
+import DepartamentoRepository from '../repositories/Departamento.repository';
+import  ProvinciaRepository from '../repositories/Provincia.repository';
+import  DistritoRepository from  '../repositories/Distrito.repository';
+
+import DepartamentoController from '../controllers/Departamento.controller';
+import ProvinciaController from '../controllers/Provincia.controller';
+import DistritoController from '../controllers/Distrito.controller';
 
 const router = express.Router();
 const reporitorydepart = new DepartamentoRepository();

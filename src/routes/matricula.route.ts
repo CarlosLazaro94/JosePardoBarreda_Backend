@@ -1,6 +1,6 @@
 import express, { Router } from 'express';
-import { MatriculaRepository } from '../repositories';
-import { MatriculaController } from '../controllers';
+import  MatriculaRepository  from '../repositories/Matricula.repository';
+import  MatriculaController  from '../controllers/Matricula.controller';
 
 const router = express.Router();
 const reporitory = new MatriculaRepository();

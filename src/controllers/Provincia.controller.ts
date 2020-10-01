@@ -1,4 +1,4 @@
-import { ProvinciaRepository } from '../repositories';
+import  ProvinciaRepository  from '../repositories/Provincia.repository';
 import { Request, Response } from 'express';
 
 export default class ProvinciaController {

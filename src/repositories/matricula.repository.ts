@@ -1,5 +1,5 @@
 //import { IMatricula, Matricula } from '../models';
-import Matricula, {IMatricula} from '../models/matricula.model';
+import Matricula, {IMatricula} from '../models/Matricula.model';
 
 export default class MatriculaRepository {
 
@@ -23,8 +23,8 @@ export default class MatriculaRepository {
     return matriculaCreated;
   }
 
-  async updateMatricula(_id: String, matricula: IMatricula) {
-    const matriculaupdate = await Matricula.updateOne({ _id }, matricula);
+  async updateMatricula(_id: String, matricula: IMatricula):Promise<IMatricula> {
+    const matriculaupdate:IMatricula = await Matricula.updateOne({ _id }, matricula);
 
     return matriculaupdate;
   }

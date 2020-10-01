@@ -1,6 +1,6 @@
-import { MatriculaRepository } from '../repositories';
+import MatriculaRepository from '../repositories/Matricula.repository';
 import { Response, Request } from 'express';
-import { IMatricula } from 'src/models';
+import { IMatricula } from '../models/Matricula.model';
 
 export default class MatriculaController {
   repository: MatriculaRepository;
@@ -14,20 +14,20 @@ export default class MatriculaController {
   }
 
   async insertMatricula(req: Request, res: Response) {
-    const matriculaCreated = await this.repository.insertMatricula(req.body);
+    const matriculaCreated: IMatricula = await this.repository.insertMatricula(req.body);
 
     res.json(matriculaCreated);
   }
 
   async getMatricula(req: Request, res: Response) {
-    const findMatricula = await this.repository.getMatricula();
+    const findMatricula: IMatricula[] = await this.repository.getMatricula();
 
     res.json(findMatricula);
   }
 
   async getMatriculaById(req: Request, res: Response) {
     const _id = req.params._id;
-    const findById:IMatricula = await this.repository.getMatriculaById(_id);
+    const findById: IMatricula = await this.repository.getMatriculaById(_id);
     res.json(findById);
   }
 
