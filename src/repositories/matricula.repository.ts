@@ -20,9 +20,9 @@ export default class MatriculaRepository {
 
   }
 
-  async getMatriculaById(_id: String): Promise<IMatricula> {
+  async getMatriculaById(codMatricula: String): Promise<IMatricula[]> {
 
-    const matricula: IMatricula = await Matricula.findById(_id);
+    const matricula: IMatricula[] = await Matricula.find({codMatricula});
 
     return matricula;
 

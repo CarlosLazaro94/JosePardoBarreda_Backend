@@ -11,7 +11,7 @@ const controller = new MatriculaController(reporitory, repository2);
 
 router.post('/', controller.insertMatricula);
 router.get('/', controller.getMatricula);
-router.get('/:_id', controller.getMatriculaById);
+router.get('/:codMatricula', controller.getMatriculaById);
 router.put('/:_id', controller.updateMatricula);
 
 export default router;

@@ -42,8 +42,8 @@ export default class MatriculaController {
 
   async getMatriculaById(req: Request, res: Response) {
 
-    const _id = req.params._id;
-    const findById: IMatricula = await this.repository.getMatriculaById(_id);
+    const codMatricula = req.params.codMatricula;
+    const findById: IMatricula[] = await this.repository.getMatriculaById(codMatricula);
     res.json(findById);
 
   }
