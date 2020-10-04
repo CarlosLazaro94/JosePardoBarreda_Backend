@@ -20,7 +20,7 @@ export interface IMatricula extends Document {
   aNumHermanos: Number;
   aLugarOcupHermanos: Number;
   aTrabaja: boolean;
-  aOcupacion: String;
+  //aOcupacion: String;
   aDiscapacidad: String;
 
   //Padre
@@ -31,7 +31,7 @@ export interface IMatricula extends Document {
   fApePaternopadre: String;
   fApeMaternopadre: String;
   fFechaNacpadre: Date;
-  fEstadoCivilpadre: String;
+  //fEstadoCivilpadre: String;
   fEstadoFallecidopadre: Boolean;
   fNivelInsitucionpadre: String;
   fSituacionLaboralpadre: Boolean;
@@ -46,7 +46,7 @@ export interface IMatricula extends Document {
   fApePaternomadre: String;
   fApeMaternomadre: String;
   fFechaNacmadre: Date;
-  fEstadoCivilmadre: String;
+  //fEstadoCivilmadre: String;
   fEstadoFallecidomadre: Boolean;
   fNivelInsitucionmadre: String;
   fSituacionLaboralmadre: Boolean;
@@ -139,10 +139,10 @@ const schema: Schema = new Schema({
     type: Boolean,
     required: true,
   },
-  aOcupacion: {
+  /*aOcupacion: {
     type: String,
     required: true,
-  },
+  },*/
   aDiscapacidad: {
     type: String,
     required: true,
@@ -176,10 +176,10 @@ const schema: Schema = new Schema({
     type: Date,
     required: true,
   },
-  fEstadoCivilpadre: {
+  /*fEstadoCivilpadre: {
     type: String,
     required: true,
-  },
+  },*/
   fEstadoFallecidopadre: {
     type: Boolean,
     required: true,
@@ -233,10 +233,10 @@ const schema: Schema = new Schema({
     type: Date,
     required: true,
   },
-  fEstadoCivilmadre: {
+  /*fEstadoCivilmadre: {
     type: String,
     required: true,
-  },
+  },*/
   fEstadoFallecidomadre: {
     type: Boolean,
     required: true,

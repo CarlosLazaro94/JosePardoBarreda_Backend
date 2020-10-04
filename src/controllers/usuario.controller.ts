@@ -32,11 +32,13 @@ export default class UsuarioController {
   }
 
   async updateusuario(req: Request, res: Response) {
+
     const _id = req.params._id;
     const usuario: IUsuario = req.body;
 
     const updateusuario = await this.repository.updateUsuario(_id, usuario);
 
     res.json(updateusuario);
+    
   }
 }
