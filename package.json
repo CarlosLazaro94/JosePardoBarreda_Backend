@@ -33,6 +33,8 @@
     "mongoose": "^5.10.6",
     "node-dependency-injection": "^2.6.8",
     "nullable": "^2.0.0",
+    "ts-node": "^9.0.0",
+    "ts-node-dev": "^1.0.0-pre.63",
     "typescript": "^4.0.2",
     "yenv": "^2.1.1"
   },
@@ -46,8 +48,6 @@
     "eslint-plugin-filenames": "^1.3.2",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.1.2",
-    "ts-node": "^9.0.0",
-    "ts-node-dev": "^1.0.0-pre.62",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "tslint-eslint-rules": "^5.4.0"
