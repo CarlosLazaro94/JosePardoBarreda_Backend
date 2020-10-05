@@ -3,9 +3,9 @@ import express, { Request, Response } from 'express';
 import router from '../src/routes/default.route';
 import cors from 'cors';
 //import dependencias
-import Ubigeoroutes from '../src/routes/Ubigeo.routes';
-import MatriculaRouter from '../src/routes/Matricula.route';
-import UsuarioRouter from '../src/routes/Usuario.router';
+import Ubigeoroutes from '/src/routes/Ubigeo.routes';
+import MatriculaRouter from '/src/routes/Matricula.route';
+import UsuarioRouter from '/src/routes/Usuario.router';
 
 
 
