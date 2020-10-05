@@ -1,7 +1,7 @@
 //import modulos
 import express, { Request, Response } from 'express';
 import router from '../src/routes/default.route';
-import cors from 'cors'
+import cors from 'cors';
 //import dependencias
 import Ubigeoroutes from './routes/Ubigeo.routes';
 import MatriculaRouter from './routes/Matricula.route';
