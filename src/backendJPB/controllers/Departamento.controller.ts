@@ -1,4 +1,4 @@
-import Departamentorepository from '../repositories/Departamento.repository';
+import Departamentorepository from '../../Context/JosePardoYBarreda/Ubigeo/repositories/Departamento.repository';
 import { Response, Request } from 'express';
 
 export default class DepartamentoController {

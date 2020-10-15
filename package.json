@@ -8,13 +8,14 @@
     "lint:code": "eslint --ext ts src/ -f stylish",
     "format": "prettier --write src/**/*.ts",
     "format:fix": "eslint --ext ts src --fix",
-    "start": "cross-env NODE_ENV=production ts-node src/server.ts",
-    "start:dev": "cross-env NODE_ENV=development ts-node src/server.ts"
+    "start": "cross-env NODE_ENV=production ts-node src/backendJPB/server.ts",
+    "start:dev": "cross-env NODE_ENV=development ts-node src/backendJPB/server.ts"
   },
   "author": "Franz Alejo Vicerrel",
   "license": "ISC",
   "dependencies": {
     "@types/assert": "^1.5.2",
+    "@types/bcryptjs": "^2.4.2",
     "@types/body-parser": "^1.19.0",
     "@types/convict": "^5.2.1",
     "@types/cors": "^2.8.7",
@@ -23,6 +24,7 @@
     "@types/mongoose": "^5.7.36",
     "@types/typescript": "^2.0.0",
     "assert": "^2.0.0",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "convict": "^6.0.0",
     "cors": "^2.8.5",

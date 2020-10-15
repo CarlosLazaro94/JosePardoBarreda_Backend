@@ -2,9 +2,9 @@ import Usuario, { IUsuario } from '../models/Usuario.model'
 
 export default class UsuarioRepository {
   //insertar usuario
-  async insertUsuario(usuario: IUsuario) {
+  async insertUsuario(usuario: IUsuario): Promise<IUsuario> {
 
-    const usuarioCreated = await Usuario.create(usuario);
+    const usuarioCreated: IUsuario = await Usuario.create(usuario);
 
     return usuarioCreated;
 
@@ -26,9 +26,15 @@ export default class UsuarioRepository {
 
   }
   //actualizar usuario
-  async updateUsuario(_id: String, usuario: IUsuario) {
+  async updateUsuario(_id: String, usuario: IUsuario): Promise<IUsuario> {
 
-    const updateusuario = await Usuario.updateOne(_id, usuario);
+    const updateusuario: any = await Usuario.findById(_id);
+    const usuarioJSON: any = Object.assign({}, usuario);
+    for (let el in usuarioJSON) {
+      updateusuario[el] = usuarioJSON[el];
+    }
+
+    await updateusuario.save();
 
     return updateusuario;
 

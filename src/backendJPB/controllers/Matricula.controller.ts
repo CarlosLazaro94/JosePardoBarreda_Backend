@@ -1,8 +1,8 @@
-import MatriculaRepository from '../repositories/Matricula.repository';
+import MatriculaRepository from '../../Context/JosePardoYBarreda/Matricula/Unica/Repositories/Matricula.repository';
 import { Response, Request } from 'express';
-import { IMatricula } from '../models/Matricula.model';
-import { IPadreFamilia } from '../models/PadreFamilia.model';
-import PadreFamiliaRepository from 'src/repositories/PadreFamilia.repository';
+import { IMatricula } from '../../Context/JosePardoYBarreda/Matricula/Unica/models/Matricula.model';
+import { IPadreFamilia } from '../../Context/JosePardoYBarreda/Matricula/Unica/models/PadreFamilia.model';
+import PadreFamiliaRepository from 'src/Context/JosePardoYBarreda/Matricula/Unica/Repositories/PadreFamilia.repository';
 
 export default class MatriculaController {
   repository: MatriculaRepository;

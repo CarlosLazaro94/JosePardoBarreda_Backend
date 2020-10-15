@@ -1,4 +1,4 @@
-import application from '../../package.json';
+import application from '../../../package.json';
 
 export default class Message {
   static log(message: string) {

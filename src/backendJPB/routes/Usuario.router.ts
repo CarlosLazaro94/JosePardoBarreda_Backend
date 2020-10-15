@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import  UsuarioRepository  from '../repositories/Usuario.repository';
+import  UsuarioRepository  from '../../Context/JosePardoYBarreda/Auth/repositories/Usuario.repository';
 import  UsuarioController  from '../controllers/Usuario.controller';
 
 const router = express.Router();

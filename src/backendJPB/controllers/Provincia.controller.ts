@@ -1,4 +1,4 @@
-import  ProvinciaRepository  from '../repositories/Provincia.repository';
+import  ProvinciaRepository  from '../../Context/JosePardoYBarreda/Ubigeo/repositories/Provincia.repository';
 import { Request, Response } from 'express';
 
 export default class ProvinciaController {

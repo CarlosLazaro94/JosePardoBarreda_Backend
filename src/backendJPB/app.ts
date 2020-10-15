@@ -1,13 +1,14 @@
 //import modulos
 import express, { Request, Response } from 'express';
-import router from '../src/routes/default.route';
+import router from './routes/default.route';
 import cors from 'cors';
 //import dependencias
-import Ubigeoroutes from '../src/routes/Ubigeo.routes';
-import MatriculaRouter from '../src/routes/Matricula.route';
-import UsuarioRouter from '../src/routes/Usuario.router';
-
-
+import Ubigeoroutes from './routes/Ubigeo.routes';
+import MatriculaRouter from './routes/Matricula.route';
+import UsuarioRouter from './routes/Usuario.router';
+import CargaAcademicaRouter from './routes/CargaAcademica.route';
+import RolesRouter from '../backendJPB/routes/Roles.route';
+import ErrorHandler from './handlers/error.handlers';
 
 const app: express.Application = express();
 
@@ -21,7 +22,9 @@ app.use('/', router);
 app.use('/matricula', MatriculaRouter);
 app.use('/usuario', UsuarioRouter);
 app.use('/ubigeo', Ubigeoroutes);
-
+app.use('/carga', CargaAcademicaRouter);
+app.use('/roles',RolesRouter);
+app.use(ErrorHandler.NotFound)
 // no found routes
 app.use((req: Request, res: Response) => res.send('Ruta no encontrada'));
 

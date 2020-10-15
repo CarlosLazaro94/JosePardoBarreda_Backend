@@ -20,6 +20,7 @@ export interface IMatricula extends Document {
   aNumHermanos: Number;
   aLugarOcupHermanos: Number;
   aTrabaja: boolean;
+  aPais:String;
   //aOcupacion: String;
   aDiscapacidad: String;
 
@@ -91,6 +92,10 @@ const schema: Schema = new Schema({
   },
   aFechaNac: {
     type: Date,
+    required: true,
+  },
+  aPais:{
+    type: String,
     required: true,
   },
   aDepartamentoNac: {

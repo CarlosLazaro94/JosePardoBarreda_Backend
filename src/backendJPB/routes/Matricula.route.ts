@@ -1,6 +1,6 @@
 import express, { Router } from 'express';
-import  MatriculaRepository  from '../repositories/Matricula.repository';
-import  PadreFamiliaRepository from '../repositories/PadreFamilia.repository'
+import  MatriculaRepository  from '../../Context/JosePardoYBarreda/Matricula/Unica/Repositories/Matricula.repository';
+import  PadreFamiliaRepository from '../../Context/JosePardoYBarreda/Matricula/Unica/Repositories/PadreFamilia.repository'
 import  MatriculaController  from '../controllers/Matricula.controller';
 
 

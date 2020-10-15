@@ -1,7 +1,7 @@
 import express, { Router } from 'express';
-import DepartamentoRepository from '../repositories/Departamento.repository';
-import  ProvinciaRepository from '../repositories/Provincia.repository';
-import  DistritoRepository from  '../repositories/Distrito.repository';
+import DepartamentoRepository from '../../Context/JosePardoYBarreda/Ubigeo/repositories/Departamento.repository';
+import  ProvinciaRepository from '../../Context/JosePardoYBarreda/Ubigeo/repositories/Provincia.repository';
+import  DistritoRepository from  '../../Context/JosePardoYBarreda/Ubigeo/repositories/Distrito.repository';
 
 import DepartamentoController from '../controllers/Departamento.controller';
 import ProvinciaController from '../controllers/Provincia.controller';

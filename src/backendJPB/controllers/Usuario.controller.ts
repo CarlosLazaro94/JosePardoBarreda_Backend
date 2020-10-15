@@ -1,6 +1,6 @@
-import  UsuarioRepository  from '../repositories/Usuario.repository';
+import  UsuarioRepository  from '../../Context/JosePardoYBarreda/Auth/repositories/Usuario.repository';
 import { Response, Request } from 'express';
-import { IUsuario } from '../models/Usuario.model';
+import { IUsuario } from '../../Context/JosePardoYBarreda/Auth/models/Usuario.model';
 
 export default class UsuarioController {
   repository: UsuarioRepository;
