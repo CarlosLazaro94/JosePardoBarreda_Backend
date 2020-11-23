@@ -8,6 +8,9 @@ import MatriculaRouter from './routes/Matricula.route';
 import UsuarioRouter from './routes/Usuario.router';
 import CargaAcademicaRouter from './routes/CargaAcademica.route';
 import RolesRouter from '../backendJPB/routes/Roles.route';
+import DocenteRouter from './routes/Docente.route';
+import cursoRouter from './routes/Curso.router';
+
 import ErrorHandler from './handlers/error.handlers';
 
 const app: express.Application = express();
@@ -21,6 +24,8 @@ app.use(express.json());
 app.use('/', router);
 app.use('/matricula', MatriculaRouter);
 app.use('/usuario', UsuarioRouter);
+app.use('/curso', cursoRouter);
+app.use('/docente', DocenteRouter);
 app.use('/ubigeo', Ubigeoroutes);
 app.use('/carga', CargaAcademicaRouter);
 app.use('/roles',RolesRouter);

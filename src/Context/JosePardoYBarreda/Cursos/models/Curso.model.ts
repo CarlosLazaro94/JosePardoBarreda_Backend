@@ -4,7 +4,7 @@ export interface ICursos extends Document {
 
     idCurso: String;
     nombreCurso: String;
-    Horario : [];
+    Horario : Number;
     isActiveCurso : Boolean;
     
 }
@@ -19,7 +19,7 @@ const schema : Schema =new Schema({
             type:String,
             required:true
     },
-    docenteCurso:{
+    Horario:{
         type:String,
         required:true
     },

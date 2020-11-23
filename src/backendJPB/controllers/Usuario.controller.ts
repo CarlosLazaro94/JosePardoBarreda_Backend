@@ -14,20 +14,20 @@ export default class UsuarioController {
   }
 
   async insertUsuario(req: Request, res: Response) {
-    const usuariocreated = await this.repository.insertUsuario(req.body);
+    const usuariocreated:IUsuario = await this.repository.insertUsuario(req.body);
 
     res.json(usuariocreated);
   }
 
   async getUsuarioAll(req: Request, res: Response) {
-    const getusuarioall = await this.repository.getUsuarioAll();
+    const getusuarioall:IUsuario[] = await this.repository.getUsuarioAll();
 
     res.json(getusuarioall);
   }
 
   async getUsuarioById(req: Request, res: Response) {
     const _id = req.params._id;
-    const getusuariobyid = await this.repository.getUsuarioById(_id);
+    const getusuariobyid:IUsuario = await this.repository.getUsuarioById(_id);
     res.json(getusuariobyid);
   }
 
@@ -36,7 +36,7 @@ export default class UsuarioController {
     const _id = req.params._id;
     const usuario: IUsuario = req.body;
 
-    const updateusuario = await this.repository.updateUsuario(_id, usuario);
+    const updateusuario:IUsuario = await this.repository.updateUsuario(_id, usuario);
 
     res.json(updateusuario);
     
